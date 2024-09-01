@@ -8,10 +8,36 @@ import {
     Typography,
 } from "@material-tailwind/react";
 import myContext from "../../../context/data/myContext";
+import { useNavigate } from "react-router";
+import toast from "react-hot-toast";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../../firebase/FirebaseConfig";
+
 
 export default function AdminLogin() {
     const context = useContext(myContext);
     const { mode } = context;
+
+    const navigate = useNavigate();
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    //* Login Function
+    const login = async () => {
+        if(!email || !password) {
+            return toast.error("Fill all required fields")
+        }
+        try {
+            const result = await signInWithEmailAndPassword(auth, email, password);
+            toast.success('Login Success')
+            localStorage.setItem('admin', JSON.stringify(result));
+            navigate('/dashboard');
+        } catch (error) {
+            toast.error('Login Failed')
+            console.log(error)
+        }
+    }
 
     return (
         <div className="flex justify-center items-center h-screen">
@@ -40,7 +66,7 @@ export default function AdminLogin() {
                     <div className="mb-4 rounded-full border border-white/10 bg-white/10 p-2 text-white">
                         <div className=" flex justify-center">
                             {/* Image  */}
-                            <img src="https://img.freepik.com/free-vector/greek-god-statue-aesthetic-post_53876-100470.jpg?w=740&t=st=1725102947~exp=1725103547~hmac=a15ae1e6e2d3b62965ef3de4cb2f7db4a332d07b9cacb19221e19ee5435cfb1c" className="h-20 w-20"
+                            <img src="https://i.pinimg.com/564x/87/2e/da/872eda2fad3aae10a6114c23b5b08691.jpg" className="h-20 w-20"
                             />
                         </div>
                     </div>
@@ -64,6 +90,8 @@ export default function AdminLogin() {
                                 type="email"
                                 label="Email"
                                 name="email"
+                                value={email}
+                                onChange={(e)=>setEmail(e.target.value)}
                             />
                         </div>
                         {/* Second Input  */}
@@ -71,10 +99,13 @@ export default function AdminLogin() {
                             <Input
                                 type="password"
                                 label="Password"
+                                value={password}
+                                onChange={(e)=>setPassword(e.target.value)}
                             />
                         </div>
                         {/* Login Button  */}
                         <Button
+                        onClick={login}
                             style={{
                                 background: mode === 'dark'
                                     ? 'rgb(226, 232, 240)'
@@ -92,4 +123,4 @@ export default function AdminLogin() {
 
 
     );
-} 
+}

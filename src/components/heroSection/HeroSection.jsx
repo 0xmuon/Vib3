@@ -7,7 +7,7 @@ function HeroSection() {
     const { mode } = context;
     return (
         <section
-            style={{ background: mode === 'dark' ? 'rgb(30, 41, 59)' : '#30336b' }}>
+            style={{ background: mode === 'dark' ? 'rgb(30, 41, 59)' : '#000000' }}>
 
             {/* Hero Section  */}
             <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
@@ -17,18 +17,18 @@ function HeroSection() {
                         <div className="mb-2">
                             {/* Image  */}
                             <div className="flex justify-center">
-                                <img src="https://cdn-icons-png.flaticon.com/128/3685/3685253.png" alt="" />
+                                <img src="https://gcdnb.pbrd.co/images/VHJfkiB8UqNF.png?o=1" alt="" />
                             </div>
 
                             {/* Text  */}
-                            <h1 className=' text-3xl text-white font-bold'>Devknus</h1>
+                            <h1 className=' text-3xl text-white font-bold'>VIB3 | VIBE WHILE LEARNING</h1>
                         </div>
 
                         {/* Paragraph  */}
                         <p
                             style={{ color: mode === 'dark' ? 'white' : 'white' }}
                             className="sm:text-3xl text-xl font-extralight sm:mx-auto ">
-                            Here are some blogs and tutorials contributed by Devknus.
+                            RECENTLY PUBLISHED BLOGS
                         </p>
                     </div>
 
