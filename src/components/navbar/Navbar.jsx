@@ -6,6 +6,7 @@ import {
     Avatar,
     Collapse,
 } from "@material-tailwind/react";
+import "./Navbar.css"
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import myContext from "../../context/data/myContext";
@@ -90,7 +91,7 @@ export default function Nav() {
                             />
                             {/* Logo Text  */}
                             <span>
-                                Vib3
+                                <p className="radient">Vib3</p>
                             </span>
                         </Typography>
                     </Link>

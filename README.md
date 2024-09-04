@@ -1,8 +1,19 @@
-# React + Vite
+# Vib3
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Create tech blogs with a personalized soundtrack. Choose from a diverse range of music genres. Share and engage with other users. Customize your blog's look and feel. Experience the future of tech blogging.
 
-Currently, two official plugins are available:
+## Tech-Stack USed:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+``` 
+React
+Firebase(to store data of blog,Login Auth)
+```
+
+## API's embedded:
+
+```
+Deezer Api(to let music play in the background)
+
+```
+
+Will soon be hosting on Vercel.

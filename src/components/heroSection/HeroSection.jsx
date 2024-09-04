@@ -17,11 +17,12 @@ function HeroSection() {
                         <div className="mb-2">
                             {/* Image  */}
                             <div className="flex justify-center">
-                                <img src="https://gcdnb.pbrd.co/images/VHJfkiB8UqNF.png?o=1" alt="" />
+                                <img src="https://gcdnb.pbrd.co/images/VHJfkiB8UqNF.png?o=1" alt="" classname="parallelex" />
                             </div>
+                            <img src="https://icon2.cleanpng.com/20240312/be/transparent-headphones-rainbow-headphones-colorful-headphones-colorful-rainbow-headphones-on-black-1710840770575.webp" alt="/>
 
                             {/* Text  */}
-                            <h1 className=' text-3xl text-white font-bold'>VIB3 | VIBE WHILE LEARNING</h1>
+                            <h1 className=' text-3xl text-white font-bold'><p  className="gradient">VIB3 | VIBE WHILE LEARNING</p></h1>
                         </div>
 
                         {/* Paragraph  */}

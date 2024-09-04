@@ -7,16 +7,12 @@ import {
 import myContext from "../../context/data/myContext";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useNavigate } from "react-router";
-
 export default function SearchDialog() {
     const [open, setOpen] = useState(false);
-
     const handleOpen = () => setOpen(!open);
-
     const context = useContext(myContext);
     const { mode, searchkey,
         setSearchkey, getAllBlog } = context;
-
     const naviagte = useNavigate();
     return (
         <Fragment>
@@ -43,7 +39,6 @@ export default function SearchDialog() {
                             }}
                         />
                     </div>
-
                     {/* Blog Card  */}
                     <div className="flex justify-center flex-wrap  sm:mx-auto sm:mb-2 -mx-2  mt-4 mb-2 ">
                         {
@@ -69,7 +64,7 @@ export default function SearchDialog() {
 
                     {/* Heading  */}
                     <div className=" text-center">
-                        <h1 className=" text-gray-600">Powered By Devknus</h1>
+                        <h1 className=" text-gray-600">Powered By Electricity</h1>
                     </div>
                 </DialogBody>
             </Dialog>
