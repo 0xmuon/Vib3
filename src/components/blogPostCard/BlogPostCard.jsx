@@ -28,8 +28,8 @@ function BlogPostCard() {
                       <div
                         style={{
                           background: mode === 'dark'
-                            ? 'rgb(30, 41, 59)'
-                            : 'white',
+                            ? 'rgb(0, 0, 0)'
+                            : 'Black',
                           borderBottom: mode === 'dark'
                             ?
                             ' 4px solid rgb(226, 232, 240)'
@@ -71,7 +71,7 @@ function BlogPostCard() {
                               ? 'rgb(226, 232, 240)'
                               : ' rgb(30, 41, 59)'
                           }}>
-                            Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.
+                            Blog Description
                           </p>
                         </div>
                       </div>
@@ -98,7 +98,7 @@ function BlogPostCard() {
                   'rgb(30, 41, 59)'
                   : 'rgb(226, 232, 240)'
               }}>
-              See More
+              If not Bored
             </Button>
           </div>
         </div>

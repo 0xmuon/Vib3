@@ -5,8 +5,7 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     animation: slide 10s linear infinite forwards;
-    color: white;
-
+    color: rgb(255, 255, 255);
 }
 @keyframes slide {
     0%{
@@ -15,8 +14,4 @@
     100%{
         background-position-x: 600vw;
     }    
-}
-
-.parallelex{
-    
 }
