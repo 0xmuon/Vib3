@@ -4,11 +4,16 @@
     width: 300px;
     height: 300px;
 }
+
 .exo-2{
     font-family: "Exo 2", sans-serif;
     font-weight: 900px;
     font-style: normal;
 }
+.whie{
+    font-color: white;
+}
+
 .spacing{
     margin: 500px;
 }
