@@ -30,27 +30,37 @@ export default function AdminLogin() {
         }
         try {
             const result = await signInWithEmailAndPassword(auth, email, password);
-            toast.success('Login Success')
+            toast.success('Welcome Back Senpai!')
             localStorage.setItem('admin', JSON.stringify(result));
             navigate('/dashboard');
         } catch (error) {
-            toast.error('Login Failed')
+            toast.error('Are you new to this town? We cant recognise you!')
             console.log(error)
         }
     }
 
     return (
-        <div className="flex justify-center items-center h-screen">
-
-            {/* Card  */}
-            <Card
-                className="w-full max-w-[24rem]"
-                style={{
-                    background: mode === 'dark'
-                        ? 'rgb(30, 41, 59)'
-                        : 'rgb(226, 232, 240)'
-                }}
-            >
+        <div>
+            <div>
+                    <a href="./">
+                            {/* Logo Image  */}
+                            <img
+                                className=' w-10 h-10 '
+                                src='https://gcdnb.pbrd.co/images/VHJfkiB8UqNF.png?o=1'
+                            />
+                    </a>
+            </div>
+            <div className="flex justify-center items-center h-screen">
+                    
+                {/* Card  */}
+                <Card
+                    className="w-full max-w-[24rem]"
+                    style={{
+                        background: mode === 'dark'
+                            ? 'rgb(0, 226, 226)'
+                            : 'rgb(226, 226, 226)'
+                    }}
+                >
                 {/* CardHeader */}
                 <CardHeader
                     color="blue"
@@ -60,7 +70,7 @@ export default function AdminLogin() {
                     style={{
                         background: mode === 'dark'
                             ? 'rgb(226, 232, 240)'
-                            : 'rgb(30, 41, 59)'
+                            : 'rgb(0, 0, 0)'
                     }}
                 >
                     <div className="mb-4 rounded-full border border-white/10 bg-white/10 p-2 text-white">
@@ -74,10 +84,10 @@ export default function AdminLogin() {
                     {/* Top Haeding  */}
                     <Typography variant="h4" style={{
                         color: mode === 'dark'
-                            ? 'rgb(30, 41, 59)'
-                            : 'rgb(226, 232, 240)'
+                            ? 'rgb(0, 0, 0)'
+                            : 'rgb(226, 226, 226)'
                     }}>
-                        Admin Login
+                        Verify yourself Ninja
                     </Typography>
                 </CardHeader>
 
@@ -88,7 +98,7 @@ export default function AdminLogin() {
                         <div>
                             <Input
                                 type="email"
-                                label="Email"
+                                label="Enter your identity Code:"
                                 name="email"
                                 value={email}
                                 onChange={(e)=>setEmail(e.target.value)}
@@ -98,29 +108,30 @@ export default function AdminLogin() {
                         <div>
                             <Input
                                 type="password"
-                                label="Password"
+                                label="Type in the secret code:"
                                 value={password}
                                 onChange={(e)=>setPassword(e.target.value)}
                             />
                         </div>
-                        {/* Login Button  */}
-                        <Button
-                        onClick={login}
-                            style={{
-                                background: mode === 'dark'
-                                    ? 'rgb(226, 232, 240)'
-                                    : 'rgb(30, 41, 59)',
-                                color: mode === 'dark'
-                                    ? 'rgb(30, 41, 59)'
-                                    : 'rgb(226, 232, 240)'
-                            }}>
-                            Login
-                        </Button>
-                    </form>
-                </CardBody>
-            </Card>
-        </div>
-
-
-    );
+                    {/* Login Button  */}
+                    <Button
+                    onClick={login}
+                        style={{
+                            background: mode === 'dark'
+                                ? 'rgb(226, 226, 226)'
+                                : 'rgb(0, 0, 0)',
+                            color: mode === 'dark'
+                                ? 'rgb(0, 0, 0)'
+                                : 'rgb(226, 226, 226)'
+                        }}>
+                        Let me in!
+                    </Button>
+                </form>
+            </CardBody>
+        </Card>
+    </div>
+</div>
+);
 }
+        
+        

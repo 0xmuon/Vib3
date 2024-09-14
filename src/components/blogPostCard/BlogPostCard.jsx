@@ -3,46 +3,14 @@ import React, { useContext } from 'react'
 import myContext from '../../context/data/myContext';
 import { useNavigate } from 'react-router';
 
-
-import Reactt, { useState, useEffect } from 'react';
-import './BlogPostCard.scss'; // Import your SCSS file
-
-const BlogPostCard = () => {
-  const [curX, setCurX] = useState(0);
-  const [curY, setCurY] = useState(0);
-  const [tgX, setTgX] = useState(0);
-  const [tgY, setTgY] = useState(0);
+function BlogPostCard() {
   const context = useContext(myContext);
   const { mode, getAllBlog } = context;
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      setTgX(event.clientX);
-      setTgY(event.clientY);
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-
-    return () => window.removeEventListener('mousemove', handleMouseMove); // Cleanup
-  }, []);
-
-  useEffect(() => {
-    const animate = () => {
-      setCurX((prevCurX) => prevCurX + (tgX - prevCurX) / 20);
-      setCurY((prevCurY) => prevCurY + (tgY - prevCurY) / 20);
-      requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => requestAnimationFrame.cancel(); // Cleanup
-  }, [tgX, tgY]); // Only re-run when target coordinates change
-
-  
   return (
-    <div className="interactive" style={{ transform: `translate(${Math.round(curX)}px, ${Math.round(curY)}px)` }}>
+    <div>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-10 mx-auto max-w-7xl ">
 
@@ -60,17 +28,17 @@ const BlogPostCard = () => {
                       <div
                         style={{
                           background: mode === 'dark'
-                            ? 'rgb(0, 0, 0)'
-                            : 'Black',
+                            ? 'rgb(30, 41, 59)'
+                            : 'white',
                           borderBottom: mode === 'dark'
                             ?
-                            ' 4px solid rgb(0, 0, 0)'
-                            : ' 4px solid rgb(0, 0, 0)'
+                            ' 4px solid rgb(226, 232, 240)'
+                            : ' 4px solid rgb(30, 41, 59)'
                         }}
                         className={`h-full shadow-lg  hover:-translate-y-1 cursor-pointer hover:shadow-gray-400
                         ${mode === 'dark'
-                            ? 'black'
-                            : 'black'
+                            ? 'shadow-gray-700'
+                            : 'shadow-xl'
                             } 
                         rounded-xl overflow-hidden`} 
                       >
@@ -82,8 +50,8 @@ const BlogPostCard = () => {
                           {/* Blog Date  */}
                           <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1" style={{
                             color: mode === 'dark'
-                              ? 'rgb(0, 0, 0)'
-                              : ' rgb(0, 0, 0)'
+                              ? 'rgb(226, 232, 240)'
+                              : ' rgb(30, 41, 59)'
                           }}>
                             {date}
                           </h2>
@@ -91,7 +59,7 @@ const BlogPostCard = () => {
                           {/* Blog Title  */}
                           <h1 className="title-font text-lg font-bold text-gray-900 mb-3" style={{
                             color: mode === 'dark'
-                              ? 'rgb(0, 0, 0)'
+                              ? 'rgb(226, 232, 240)'
                               : ' rgb(30, 41, 59)'
                           }}>
                             {item.blogs.title}
@@ -100,10 +68,10 @@ const BlogPostCard = () => {
                           {/* Blog Description  */}
                           <p className="leading-relaxed mb-3" style={{
                             color: mode === 'dark'
-                              ? 'rgb(0, 0, 0)'
-                              : ' rgb(0, 0, 0)'
+                              ? 'rgb(226, 232, 240)'
+                              : ' rgb(30, 41, 59)'
                           }}>
-                            Blog Description
+                            Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.
                           </p>
                         </div>
                       </div>
@@ -113,7 +81,7 @@ const BlogPostCard = () => {
               </>
               :
               <>
-                <h1 className='exo-2 whie'>I guess it's gonna take a while,QUALITY over QUANTITY :|</h1>
+                <h1 className='text-xl font-bold'>Not Found</h1>
               </>
             }
           </div>
@@ -123,20 +91,20 @@ const BlogPostCard = () => {
             <Button
               style={{
                 background: mode === 'dark'
-                  ? 'rgb(226, 226, 226)'
-                  : 'rgb(0, 0, 0)',
+                  ? 'rgb(226, 232, 240)'
+                  : 'rgb(30, 41, 59)',
                 color: mode === 'dark'
                   ?
-                  'rgb(0, 0, 0)'
+                  'rgb(30, 41, 59)'
                   : 'rgb(226, 232, 240)'
               }}>
-              If not Bored
+              See More
             </Button>
           </div>
         </div>
       </section >
-    </div>
-  );
-};
+    </div >
+  )
+}
 
-export default BlogPostCard;
+export default BlogPostCard
