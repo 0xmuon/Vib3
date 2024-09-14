@@ -34,7 +34,7 @@ export default function Nav() {
                 style={{ color: mode === 'dark' ? 'white' : 'white' }}
             >
                 <Link to={'/'} className="flex items-center">
-                    Home
+                    Otaku
                 </Link>
             </Typography>
             <Typography
@@ -45,7 +45,7 @@ export default function Nav() {
                 style={{ color: mode === 'dark' ? 'white' : 'white' }}
             >
                 <Link to={'/allblogs'} className="flex items-center">
-                    Blogs
+                    Blogz
                 </Link>
             </Typography>
             {!admin
@@ -58,7 +58,7 @@ export default function Nav() {
                     style={{ color: mode === 'dark' ? 'white' : 'white' }}
                 >
                     <Link to={'/adminlogin'} className="flex items-center">
-                        Admin Login
+                        Verify
                     </Link>
                 </Typography>
                 :

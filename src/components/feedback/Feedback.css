@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+.feedback{
+    width: 100%;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+}
+.contanta{
+    text-decoration: none;
+    display: inline-block;
+    color: #000000;
+    font-size:24px;
+    border:  2px solid #000000;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+.back-play{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (max-aspect-ratio:16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+
+    }
+}
