@@ -2,12 +2,15 @@ import React from 'react'
 import './Feedback.css'
 const Feedback = () => {
   return (
-    <div className="feedback">
+    <div className="image-container">
         <video autoplay loop muted  plays-inline className='back-play'>
-            <source src="C:\Users\khush\Vib3\src\assets\luffy-edit.mp4" type="video/mp4" />
+            <source src="../../assets/luffy-edit.mp4" type="video/mp4" />
         </video>
-        <h1 className="contanta">Explore</h1>
-        <img className="feedback play-back" src="https://gifdb.com/images/high/anime-rainy-scene-l79hej9j4iihcwqv.gif"/>
+        <img className='feedback' src="https://i.pinimg.com/originals/7f/2d/1b/7f2d1baa0a92449ec2bbc21772a36762.gif"/>
+        <div className="text-overlay contant">
+            <h1>feedback</h1>
+            <a href="">Here!</a>
+        </div>
     </div>
   )
 }
