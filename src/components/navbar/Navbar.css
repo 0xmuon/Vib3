@@ -5,7 +5,12 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     animation: slide 10s linear infinite forwards;
-    color: rgb(255, 255, 255);
+    color: #ffee02;
+}
+
+test-yellow{
+    color: #ffee02;
+    font-weight: 300;
 }
 @keyframes slide {
     0%{

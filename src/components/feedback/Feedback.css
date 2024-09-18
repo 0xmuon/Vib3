@@ -19,12 +19,12 @@
 
 .contant h1{
     font-size: 120px;
-    color: #fff;
+    color: #ffee02;
     font-weight: 600;
 }
 
 .contant h1:hover{
-    -webkit-text-stroke: 2px #fff;
+    -webkit-text-stroke: 2px #ffee02;
     color: transparent;
 }
 
@@ -47,9 +47,9 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    color: #fff;
+    color: #ffee02;
     font-size:24px;
-    border:  2px solid #fff;
+    border:  2px solid #ffee02;
     padding: 14px 70px;
     border-radius: 50px;
     margin-top: 20px;
@@ -57,7 +57,7 @@
 
 .contant a:hover{
     background-color: #000000;
-    color: #ffffff;
+    color: #ffee02;
     border:  2px solid #000000;
 }
 

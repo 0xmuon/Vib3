@@ -9,7 +9,7 @@ const Feedback = () => {
         <img className='feedback' src="https://i.pinimg.com/originals/7f/2d/1b/7f2d1baa0a92449ec2bbc21772a36762.gif"/>
         <div className="text-overlay contant">
             <h1>feedback</h1>
-            <a href="">Here!</a>
+            <a href="">!</a>
         </div>
     </div>
   )

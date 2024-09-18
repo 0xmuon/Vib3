@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import myContext from '../../context/data/myContext';
+import '../navbar/Navbar.css'
 
 function Footer() {
     const context = useContext(myContext);
@@ -15,14 +16,14 @@ function Footer() {
                         src="https://gcdnb.pbrd.co/images/VHJfkiB8UqNF.png?o=1" alt="logo"
                     />
                     {/* logo text  */}
-                    <span className="ml-3 text-xl text-white">
+                    <span className="test-yellow">
                         Vib3
                     </span>
                 </div>
 
                 {/* items  */}
-                <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-                    © 2024 0xmuon —
+                <p className="text-white text-sm sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+                    © 2024 MUON & Co. —
                     <a
                         href="https://twitter.com/0xmuon"
                         className="text-gray-600 ml-1"
