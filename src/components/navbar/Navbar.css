@@ -8,10 +8,6 @@
     color: #ffee02;
 }
 
-test-yellow{
-    color: #ffee02;
-    font-weight: 300;
-}
 @keyframes slide {
     0%{
         background-position-x: 0%;

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import myContext from '../../context/data/myContext';
-import '../navbar/Navbar.css'
+import './Footer.css';
 
 function Footer() {
     const context = useContext(myContext);
@@ -22,7 +22,7 @@ function Footer() {
                 </div>
 
                 {/* items  */}
-                <p className="text-white text-sm sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+                <p className="text-yellow justify-center">
                     © 2024 MUON & Co. —
                     <a
                         href="https://twitter.com/0xmuon"
