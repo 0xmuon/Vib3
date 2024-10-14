@@ -28,7 +28,7 @@ function Comment({ addComment, commentText, setcommentText, allComment, fullName
             }}>
             <input
               type='text'
-              placeholder='Enter Full Name'
+              placeholder='Let us know your Name'
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               className="px-0 w-full text-sm border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 "
@@ -58,7 +58,7 @@ function Comment({ addComment, commentText, setcommentText, allComment, fullName
               onChange={(e) => setcommentText(e.target.value)}
               className="px-0 w-full text-sm border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 " style={{ background: mode === 'dark' ? '#353b48' : 'rgb(226, 232, 240)' }} placeholder="Write a comment..." required defaultValue={""} />
           </div>
-          {/* Button  */}
+          {/* Buttons     */}
           <div className="">
             <Button 
             onClick={addComment}
