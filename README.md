@@ -16,4 +16,9 @@ Deezer Api(to let music play in the background)
 
 ```
 
-Will soon be hosting on Vercel.
+use std::env;
+use std::process::Command;
+
+fn main() {
+    // todo 
+}
